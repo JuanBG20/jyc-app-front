@@ -68,16 +68,22 @@ export default function CreateMovement() {
             value={movement.quantity}
           />
 
-          <label htmlFor="client_id">ID del Cliente: </label>
-          <select onChange={handleChange} name="client_id" id="client_id">
-            {clients?.map(({ _id, id }) => (
-              <option key={_id}>{id}</option>
-            ))}
-          </select>
+          {movement.type == "Venta" ? (
+            <>
+              <label htmlFor="client_id">ID del Cliente: </label>
+              <select onChange={handleChange} name="client_id" id="client_id">
+                {clients?.map(({ _id, id, name }) => (
+                  <option key={_id}>{id}</option>
+                ))}
+              </select>
+            </>
+          ) : (
+            ""
+          )}
 
           <label htmlFor="product_code">Código del Producto: </label>
           <select onChange={handleChange} name="product_code" id="product_code">
-            {products?.map(({ _id, code }) => (
+            {products?.map(({ _id, code, name }) => (
               <option key={_id}>{code}</option>
             ))}
           </select>

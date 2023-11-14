@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import "@/styles/createForm.css";
+import "@/styles/lists.css";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }) {

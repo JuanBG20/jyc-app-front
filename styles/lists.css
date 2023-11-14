@@ -1,0 +1,29 @@
+.divListContainer {
+  text-align: center;
+}
+
+.listContainer {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  border: 1px solid blue;
+  border-radius: 0.5rem;
+  max-width: 50rem;
+  margin: auto;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.head {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 50rem) {
+  .listContainer {
+    margin: 1rem;
+  }
+}
